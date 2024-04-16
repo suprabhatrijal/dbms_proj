@@ -1,6 +1,6 @@
 # GradeBook
 
-# This repo contains the project work for the Database Systems course
+# This repo contains the project work for the Database Systems course for Group 18
 
 # About the files and folders in this repository:
 
