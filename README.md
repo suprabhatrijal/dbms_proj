@@ -144,7 +144,7 @@ Calculating the grade of the student from the grades table manually, we can veri
 
 ![Image](./question_solution_images/Question11A.png)
 
-#### Getting the grades for a given the courses a particular student is enrolled in:
+#### Getting the grades for a given course taht a particular student is enrolled in:
 ![Image](./question_solution_images/Question11B.png)
 
 ## 12. Compute the grade for a student, where the lowest score for a given category is dropped.
