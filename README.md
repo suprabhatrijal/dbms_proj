@@ -38,10 +38,10 @@ Install a Database Management System (DBMS): Begin by installing PostgreSQL on y
 Install, open and configure pgadmin and create a db server with a database called 'proj'.
 
 ### Create the database schema:
-Run the queries in create_tables.sql to initialize the database with the correct schema that correspond to the entities in the ERD diagram given in this repository.
+Run the queries in **create_tables.sql** to initialize the database with the correct schema that correspond to the entities in the ERD diagram given in this repository.
 
 ### Add mock data to the database table:
-Run all the queries in insert.sql to add mock data to the tables. 
+Run all the queries in **insert.sql** to add mock data to the tables. 
 
 ### Run queries in question.sql:
 The queries in this file are solutions to the problems given in the project. Running each query will give the solution to the respective problem.
@@ -49,7 +49,7 @@ The queries in this file are solutions to the problems given in the project. Run
 # Problem Statement
 You are asked to implement a grade book to keep track student grades for several couses that a professor teaches. Courses should have the information of department, course number, course name, semester, and year.  For each course, the grade is caculated on various categories, including course participations, homework, tests, projects, etc.  The total percentages of the categories should add to 100% and the total perfect grade should be 100. The number of assignments from each category is unspecified, and can change at any time.  For example, a course may be graded by the distribution: 10% participation, 20% homework, 50% tests, 20% projects. Please note that if there are 5 homework, each homework is worth 20%/5=4% of the grade.
 
-# Tasks and their solutions
+# Tasks and their responses/solutions:
 ## 1. Design the ER diagram:
 
 The ERD Diagram is given below:
