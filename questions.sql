@@ -15,14 +15,12 @@ SELECT StudentFname, StudentLname, BisonEmail, CourseName FROM
 WHERE Courses.CourseID = 1
 
 -- Question 6: List all of the students in a course and all of their scores on every assignment
-SELECT StudentFname, StudentLname, BisonEmail, Courses.CourseName, AssignmentName, PointsObtained,MaximumPoints FROM
-  Students JOIN CourseEnrollments ON Students.StudentID = CourseEnrollments.StudentID
-  JOIN Courses ON CourseEnrollments.CourseID = Courses.CourseID
-  JOIN StudentGrades ON Students.StudentID = StudentGrades.StudentID
-  JOIN Assignments ON StudentGrades.AssignmentID = Assignments.AssignmentID
-WHERE CourseEnrollments.CourseID = 1
-ORDER BY StudentFname;
-
+SELECT Students.StudentFname, Students.StudentLname, Students.BisonEmail, Courses.CourseName, Assignments.AssignmentName, StudentGrades.PointsObtained, Assignments.MaximumPoints FROM
+	StudentGrades JOIN Assignments ON StudentGrades.AssignmentID = Assignments.AssignmentID
+	JOIN Courses ON Assignments.CourseID = Courses.CourseID
+	JOIN Students ON StudentGrades.StudentID = Students.StudentID
+WHERE Courses.CourseID = 1
+ORDER BY Students.StudentFname;
 
 
 -- Question 7: Add an assignment to a course;
@@ -60,8 +58,11 @@ SELECT * FROM StudentGrades WHERE AssignmentID = 5;
 UPDATE StudentGrades SET PointsObtained = PointsObtained + 2
 	WHERE StudentGrades.StudentID IN (
 	SELECT Students.StudentID FROM Students WHERE StudentLname LIKE '%q%' OR StudentLname LIKE '%Q%' 
-)
-RETURNING *;
+);
+
+SELECT Students.StudentID, Students.StudentLname, StudentGrades.PointsObtained FROM
+Students JOIN StudentGrades ON Students.StudentID = StudentGrades.StudentID
+ORDER BY Students.StudentID;
 
 
 
