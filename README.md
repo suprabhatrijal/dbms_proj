@@ -3,7 +3,32 @@
 # This repo contains the project work for the Database Systems course
 
 # About the files and folders in this repository:
-asfasdf
+
+### 1. ERD.png:
+
+It is the ERD diagram for the project.
+
+### 2. create_tables.sql:
+
+It contains the queries to create the tables and relations given in the ERD diagram.
+
+### 3. insert.sql:
+
+It contains the queries to add mock data to the database.
+
+### 4. questions.sql:
+
+It contains the responses to the questions given in the project. The queries are separate by their respective question numbers using comments.
+
+### 5. images_for_inserted_values/:
+
+It is a folder that contains images that shows the tables after queries in the **insert.sql** file has been run. Each image files' name corresponds to the table it refers to. If the table is to big for one picture, it is split into multiple files.
+
+### 6. question_solution_images/:
+
+It is a folder that contains images of test cases to validate the data after running the queries in **questions.sql**. The filename of each image corresponds to the respective question. If more than one test case is required for a particular question, it is split into multiple files.
+
+
 
 # Instructions to run:
 
